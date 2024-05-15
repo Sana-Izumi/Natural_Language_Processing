@@ -17,21 +17,38 @@ I experimented with the Logistic Regression model using three different error ra
 
 \subsubsection{Logistic Regression Model Results}
 
-\begin{verbatim}
-Accuracy: 0.4645
-             precision  recall  f1-score   support
-
-           0      0.47    0.65    0.55     47305
-           1      0.44    0.28    0.35     47390
-
-    accuracy                      0.46     94695
-   macro avg      0.46    0.46    0.45     94695
-weighted avg      0.46    0.46    0.45     94695
-\end{verbatim}
+\begin{table}[h!]
+\centering
+\caption{Evaluation Metrics}
+\label{tab:evaluation_metrics}
+\begin{tabular}{|l|c|}
+\hline
+\textbf{Metric} & \textbf{Value} \\
+\hline
+Accuracy        & 0.4645 \\
+\hline
+Precision (Class 0)       & 0.47 \\
+\hline
+Precision (Class 1)       & 0.44 \\
+\hline
+Recall (Class 0)       & 0.65 \\
+\hline
+Recall (Class 1)       & 0.28 \\
+\hline
+F1-score (Class 0)       & 0.55 \\
+\hline
+F1-score (Class 1)       & 0.35 \\
+\hline
+Support (Class 0)       & 47305 \\
+\hline
+Support (Class 1)       & 47390 \\
+\hline
+\end{tabular}
+\end{table}
 
 \begin{figure}[h!]
     \centering
-    \includegraphics[width=0.3\textwidth]{LogiReg_result.png}
+    \includegraphics[width=0.5\textwidth]{Figures/LogiReg_result.png}
     \caption{Evaluation results of Logistic Regression model.}
     \label{fig:logreg_results}
 \end{figure}
@@ -50,86 +67,148 @@ To optimize and improve accuracy, I built an LSTM-based neural network model. I 
 \subsubsection{LSTM Model Results}
 
 1. \textbf{(error rate = 0.1, epochs = 10, batch size = 64)}
-\begin{verbatim}
-Accuracy: 0.5153
-             precision  recall  f1-score   support
 
-           0      0.51     0.76     0.61     47305
-           1      0.53     0.27     0.36     47390
-
-    accuracy                        0.52     94695
-   macro avg      0.52     0.52     0.48     94695
-weighted avg      0.52     0.52     0.48     94695
-\end{verbatim}
+\begin{table}[h!]
+\centering
+\caption{Evaluation Metrics}
+\label{tab:evaluation_metrics}
+\begin{tabular}{|l|c|}
+\hline
+\textbf{Metric} & \textbf{Value} \\
+\hline
+Accuracy        & 0.5153 \\
+\hline
+Precision (Class 0)       & 0.51 \\
+\hline
+Precision (Class 1)       & 0.53 \\
+\hline
+Recall (Class 0)       & 0.76 \\
+\hline
+Recall (Class 1)       & 0.27 \\
+\hline
+F1-score (Class 0)       & 0.61 \\
+\hline
+F1-score (Class 1)       & 0.36 \\
+\hline
+Support (Class 0)       & 47305 \\
+\hline
+Support (Class 1)       & 47390 \\
+\hline
+\end{tabular}
+\end{table}
 
 \begin{figure}[h!]
     \centering
-    \includegraphics[width=0.3\textwidth]{ER10_epoch10_batch64.png}
+    \includegraphics[width=0.5\textwidth]{Figures/ER10_epoch10_batch64.png}
     \caption{Evaluation results of LSTM model with error rate 0.1, epochs 10, batch size 64.}
     \label{fig:lstm_results_0.1_10_64}
 \end{figure}
 
 2. \textbf{(error rate = 0.5, epochs = 10, batch size = 64)}
-\begin{verbatim}
-Accuracy: 0.6380
-            precision    recall  f1-score   support
 
-           0      0.59     0.91     0.71    47305
-           1      0.80     0.37     0.50    47390
-
-    accuracy                        0.64     94695
-   macro avg      0.69     0.64     0.61     94695
-weighted avg      0.69     0.64     0.61     94695
-\end{verbatim}
+\begin{table}[h!]
+\centering
+\caption{Evaluation Metrics}
+\label{tab:evaluation_metrics}
+\begin{tabular}{|l|c|}
+\hline
+\textbf{Metric} & \textbf{Value} \\
+\hline
+Accuracy        & 0.6380 \\
+\hline
+Precision (Class 0)       & 0.59 \\
+\hline
+Precision (Class 1)       & 0.80 \\
+\hline
+Recall (Class 0)       & 0.91 \\
+\hline
+Recall (Class 1)       & 0.37 \\
+\hline
+F1-score (Class 0)       & 0.71 \\
+\hline
+F1-score (Class 1)       & 0.50 \\
+\hline
+Support (Class 0)       & 47305 \\
+\hline
+Support (Class 1)       & 47390 \\
+\hline
+\end{tabular}
+\end{table}
 
 \begin{figure}[h!]
     \centering
-    \includegraphics[width=0.3\textwidth]{1-ER50_epoch10_batch64.png}
+    \includegraphics[width=0.5\textwidth]{Figures/1-ER50_epoch10_batch64.png}
     \label{fig:lstm_results_0.5_10_64-1}
 \end{figure}
 \begin{figure}[h!]
     \centering
-    \includegraphics[width=0.3\textwidth]{2-ER50_epoch10_batch64.png}
+    \includegraphics[width=0.5\textwidth]{Figures/2-ER50_epoch10_batch64.png}
     \caption{Evaluation results of LSTM model with error rate 0.5, epochs 10, batch size 64.}
     \label{fig:lstm_results_0.5_10_64-2}
 \end{figure}
 
+\vspace{100pt}
+
 3. \textbf{(error rate = 0.5, epochs = 10, batch size = 32)}
-\begin{verbatim}
-Accuracy: 0.6408
-            precision    recall  f1-score   support
 
-           0      0.59     0.91    0.72    47305
-           1      0.81     0.37    0.51    47390
-
-    accuracy                       0.64     94695
-   macro avg      0.70     0.64    0.61     94695
-weighted avg      0.70     0.64    0.61     94695
-\end{verbatim}
+\begin{table}[h!]
+\centering
+\caption{Evaluation Metrics}
+\label{tab:evaluation_metrics}
+\begin{tabular}{|l|c|}
+\hline
+\textbf{Metric} & \textbf{Value} \\
+\hline
+Accuracy        & 0.6408 \\
+\hline
+Precision (Class 0)       & 0.59 \\
+\hline
+Precision (Class 1)       & 0.81 \\
+\hline
+Recall (Class 0)       & 0.91 \\
+\hline
+Recall (Class 1)       & 0.37 \\
+\hline
+F1-score (Class 0)       & 0.72 \\
+\hline
+F1-score (Class 1)       & 0.51 \\
+\hline
+Support (Class 0)       & 47305 \\
+\hline
+Support (Class 1)       & 47390 \\
+\hline
+\end{tabular}
+\end{table}
 
 \begin{figure}[h!]
     \centering
-    \includegraphics[width=0.3\textwidth]{ER50_epoch10_batch32.png}
+    \includegraphics[width=0.5\textwidth]{Figures/ER50_epoch10_batch32.png}
     \caption{Evaluation results of LSTM model with error rate 0.5, epochs 10, batch size 32.}
     \label{fig:lstm_results_0.5_10_32}
 \end{figure}
 
+\vspace{100pt}
+
 4. \textbf{(error rate = 0.8, epochs = 10, batch size = 64)}
-\begin{verbatim}
-Accuracy: 0.7451
-            precision    recall  f1-score   support
 
-           0      0.69     0.89     0.78    47305
-           1      0.84     0.60     0.70    47390
-
-    accuracy                        0.75    94695
-   macro avg      0.77     0.75     0.74    94695
-weighted avg      0.77     0.75     0.74    94695
-\end{verbatim}
+\begin{table}[ht]
+\centering
+\caption{Evaluation Metrics}
+\label{tab:evaluation_metrics}
+\begin{tabular}{|l|c|c|c|c|}
+\hline
+\textbf{Metric} & \textbf{Class 0} & \textbf{Class 1} & \textbf{Macro Avg} & \textbf{Weighted Avg} \\ \hline
+Accuracy        & 0.7451            &                   &                     &                        \\ \hline
+Precision       & 0.69              & 0.84              & 0.77                & 0.77                   \\ \hline
+Recall          & 0.89              & 0.60              & 0.75                & 0.75                   \\ \hline
+F1-score        & 0.78              & 0.70              & 0.74                & 0.74                   \\ \hline
+Support         & 47305             & 47390             & 94695               & 94695                  \\ \hline
+\end{tabular}
+\end{table}
 
 \begin{figure}[h!]
     \centering
-    \includegraphics[width=0.3\textwidth]{ER80_epoch10_batch64.png}
+    \includegraphics[width=0.5\textwidth]{Figures/ER80_epoch10_batch64.png}
     \caption{Evaluation results of LSTM model with error rate 0.8, epochs 10, batch size 64.}
     \label{fig:lstm_results_0.8_10_64}
 \end{figure}
@@ -162,7 +241,7 @@ Despite the improved metrics with the LSTM model, the real-world usage of the ch
 
 \begin{figure}[h!]
     \centering
-    \includegraphics[width=0.3\textwidth]{chatbot_display.png}
+    \includegraphics[width=0.5\textwidth]{Figures/chatbot_display.png}
     \caption{Example Chatbot Usage.}
     \label{fig:lchatbot_display}
 \end{figure}

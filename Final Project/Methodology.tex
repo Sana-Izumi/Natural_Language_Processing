@@ -12,7 +12,7 @@ The following flowchart illustrates the steps involved in developing the spell-c
 The first step in developing the spell-correcting chatbot was to collect and preprocess the data. I utilized the words corpus from the Natural Language Toolkit (NLTK), which contains a comprehensive list of English words. This dataset provided the foundation for both correctly spelled words and misspelled variants.
 
 \subsubsection{Introducing Misspellings}
-To simulate real-world scenarios where users may input misspelled words, I created a function to introduce random misspellings into the dataset. This function, introduce_misspellings, modifies a given word by randomly replacing one of its characters with another character from the alphabet, based on a specified error rate. The experimented error rates were 0.1(10\%), 0.5(50\%), and 0.8(80\%). This process generated a diverse set of misspelled words to train the model effectively.
+To simulate real-world scenarios where users may input misspelled words, I created a function to introduce random misspellings into the dataset. This function, introduce\_misspellings, modifies a given word by randomly replacing one of its characters with another character from the alphabet, based on a specified error rate. The experimented error rates were 0.1(10\%), 0.5(50\%), and 0.8(80\%). This process generated a diverse set of misspelled words to train the model effectively.
 \begin{lstlisting}[language=Python, caption=Data Collection and Preprocessing]
     import nltk
     from nltk.corpus import words
@@ -79,7 +79,7 @@ Initially, I implemented a Logistic Regression model with a pipeline using the '
 
 
 \subsection{LSTM-Based Neural Network Model}
-To optimize and improve the accuracy, I built an LSTM-based neural network model according to Dhankhar(2018)\cite{DhanLSTM}. The model architecture consisted of an embedding layer, two LSTM layers, and a dense output layer with a sigmoid activation function.
+To optimize and improve the accuracy, I built an LSTM-based neural network model according to Dhankhar(2018). The model architecture consisted of an embedding layer, two LSTM layers, and a dense output layer with a sigmoid activation function.
 
 ¥begin{itemize}
     ¥item Embedding Layer: Converts the input sequences into dense vectors of fixed size.
